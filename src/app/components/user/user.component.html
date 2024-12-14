@@ -1,0 +1,546 @@
+<div class="container">
+  <div class="row mt-3 gy-3 mb-5">
+    <div class="col-lg-12">
+      <div
+        class="bg-light p-2 border rounded d-flex align-items-center justify-content-between"
+      >
+        <h1 class="fs-4 m-0">Dashboard</h1>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="row gx-3">
+        <div class="col-xl-3 col-lg-4">
+          <div class="profile d-lg-block d-md-none d-sm-none d-none">
+            <div class="profile-bg">
+              <div class="cover-img">
+                <img src="../../../assets/cover-img.jpg" />
+              </div>
+              <div class="profile-img">
+                <img src="../../../assets/profile-pic.png" />
+                <div>
+                  <h1>Bhagavan</h1>
+                  <p>bhagavan4923&#64;gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="nav-tabs-1">
+              <ul class="list-nav-items" id="myTab" role="tablist">
+                <li>
+                  <a
+                    class="nav-link active"
+                    id="dashboard-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#dashboard-tab-pane"
+                    aria-controls="dashboard-tab-pane"
+                  >
+                    <i class="ri-home-2-line"></i>
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
+                    id="notification-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#notification-tab-pane"
+                    aria-controls="notification-tab-pane"
+                  >
+                    <i class="ri-notification-2-line"></i>
+                    Notification
+                  </a>
+                </li>
+                <li>
+                  <a
+                    id="bank-details-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#bank-details-tab-pane"
+                    aria-controls="bank-details-tab-pane"
+                  >
+                    <i class="ri-bank-line"></i>
+                    Bank Details
+                  </a>
+                </li>
+                <li>
+                  <a
+                    id="wallet-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#wallet-tab-pane"
+                    aria-controls="wallet-tab-pane"
+                  >
+                    <i class="ri-wallet-line"></i>
+                    Wallet
+                  </a>
+                </li>
+                <li>
+                  <a
+                    id="my-orders-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#my-orders-tab-pane"
+                    aria-controls="my-orders-tab-pane"
+                  >
+                    <i class="ri-file-text-line"></i>
+                    My Orders
+                  </a>
+                </li>
+                <li>
+                  <a
+                    id="refund-history-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#refund-history-tab-pane"
+                    aria-controls="refund-history-tab-pane"
+                  >
+                    <i class="ri-money-dollar-circle-line"></i>
+                    Refund History
+                  </a>
+                </li>
+                <li>
+                  <a
+                    id="saved-address-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#saved-address-tab-pane"
+                    aria-controls="saved-address-tab-pane"
+                  >
+                    <i class="ri-map-pin-line"></i>
+                    Saved Address
+                  </a>
+                </li>
+              </ul>
+
+              <div class="log-out">
+                <hr class="m-0 border" />
+                <button
+                  class="btn btn-success d-flex align-items-center justify-content-center gap-2 w-100"
+                >
+                  <i class="ri-login-box-line"></i>
+                  Logout
+                </button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn btn-orange d-md-block d-lg-none mb-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+          >
+            Show Menu
+          </button>
+        </div>
+        <div class="col-xl-9 col-lg-8">
+          <div class="tab-content">
+            <div
+              class="tab-pane fade show active"
+              id="dashboard-tab-pane"
+              role="tabpanel"
+              aria-labelledby="dashboard-tab"
+            >
+              <div class="pane-content">
+                <h1>Dashboard</h1>
+                <div class="user-details">
+                  <h2>Hello, <strong>Bhagavan</strong></h2>
+                  <p>
+                    Welcome to your personalized My Account Dashboard. Here, you
+                    have the power to manage your entire e-commerce experience
+                    in one place. Whether you're exploring the latest products,
+                    checking your wallet balance, or updating your profile,
+                    everything is at your fingertips
+                  </p>
+                  <div class="details">
+                    <h3>Profile Information</h3>
+                    <ul>
+                      <li>
+                        <label>Name:</label>
+                        <span> Bhagavan Pabbu </span>
+                      </li>
+                      <li>
+                        <label>Phone:</label>
+                        <span> +1 5551855359 </span>
+                      </li>
+                      <li>
+                        <label>Address:</label>
+                        <span>
+                          26, Starts Hollow Colony Denver, Colorado, United
+                          States 80014
+                        </span>
+                      </li>
+                    </ul>
+                    <h3>Profile Information</h3>
+                    <ul>
+                      <li>
+                        <label>Email :</label>
+                        <span> bhagavan4923&#64;gamil.com</span>
+                      </li>
+                      <li>
+                        <label>Password :</label>
+                        <span>*******</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="notification-tab-pane"
+              role="tabpanel"
+              aria-labelledby="notification-tab"
+            >
+              <div class="pane-content">
+                <h1>Notifications</h1>
+                <ul class="list-nav-items items">
+                  <li>
+                    <a class="active flex-column align-items-start gap-0">
+                      <span>Your Refund request status has been rejected</span>
+                      <P>
+                        <i class="ri-time-line"></i>
+                        30 Sep 2023 01:44:PM
+                      </P>
+                    </a>
+                  </li>
+                  <li *ngFor="let i of [1, 1, 1, 1, 1, 1]">
+                    <a class="flex-column align-items-start gap-0">
+                      <span>Your Refund request status has been rejected</span>
+                      <P>
+                        <i class="ri-time-line"></i>
+                        30 Sep 2023 01:44:PM
+                      </P>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="bank-details-tab-pane"
+              role="tabpanel"
+              aria-labelledby="bank-details-tab"
+            >
+              <div class="pane-content d-flex flex-column gap-3">
+                <h1>Bank Details</h1>
+                <div class="my-2">
+                  <div class="row gy-4 align-items-center">
+                    <div class="col-2">
+                      <label class="form-label">Bank Account No:</label>
+                    </div>
+                    <div class="col-10">
+                      <input
+                        class="form-control"
+                        placeholder="Enter Bank Account No "
+                      />
+                    </div>
+                    <div class="col-2">
+                      <label class="form-label">Bank Name:</label>
+                    </div>
+                    <div class="col-10">
+                      <input
+                        class="form-control"
+                        placeholder="Enter Bank Name "
+                      />
+                    </div>
+                    <div class="col-2">
+                      <label class="form-label">Holder Name:</label>
+                    </div>
+                    <div class="col-10">
+                      <input
+                        class="form-control"
+                        placeholder="Enter Bank Holder Name "
+                      />
+                    </div>
+                    <div class="col-2">
+                      <label class="form-label">Swift:</label>
+                    </div>
+                    <div class="col-10">
+                      <input class="form-control" placeholder="Enter Swift" />
+                    </div>
+                    <div class="col-2">
+                      <label class="form-label">IFSC:</label>
+                    </div>
+                    <div class="col-10">
+                      <input
+                        class="form-control"
+                        placeholder="Enter IFSC No."
+                      />
+                    </div>
+                  </div>
+                </div>
+                <hr class="m-0 border" />
+                <h1>Paypal Details</h1>
+                <div class="row gy-4 my-1 align-items-center">
+                  <div class="col-2">
+                    <label class="form-label">Paypal Email:</label>
+                  </div>
+                  <div class="col-10">
+                    <input
+                      class="form-control"
+                      placeholder="Enter Paypal Email"
+                    />
+                  </div>
+                  <div class="col-12 d-flex">
+                    <button class="ms-auto btn btn-success">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="wallet-tab-pane"
+              role="tabpanel"
+              aria-labelledby="wallet-tab"
+            >
+              <div class="pane-content">
+                <h1>Transactions</h1>
+                <ul class="list-nav-items items">
+                  <li>
+                    <a class="active flex-column align-items-start gap-0">
+                      <span>Your Refund request status has been rejected</span>
+                      <P>
+                        <i class="ri-time-line"></i>
+                        30 Sep 2023 01:44:PM
+                      </P>
+                    </a>
+                  </li>
+                  <li *ngFor="let i of [1, 1, 1, 1, 1, 1]">
+                    <a class="flex-column align-items-start gap-0">
+                      <span>Your Refund request status has been rejected</span>
+                      <P>
+                        <i class="ri-time-line"></i>
+                        30 Sep 2023 01:44:PM
+                      </P>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="my-orders-tab-pane"
+              role="tabpanel"
+              aria-labelledby="my-orders-tab"
+            >
+              <div class="pane-content">
+                <h1>My Orders</h1>
+                <ul class="list-nav-items items">
+                  <li>
+                    <a class="active flex-column align-items-start gap-0">
+                      <span>Your Refund request status has been rejected</span>
+                      <P>
+                        <i class="ri-time-line"></i>
+                        30 Sep 2023 01:44:PM
+                      </P>
+                    </a>
+                  </li>
+                  <li *ngFor="let i of [1, 1, 1, 1, 1, 1]">
+                    <a class="flex-column align-items-start gap-0">
+                      <span>Your Refund request status has been rejected</span>
+                      <P>
+                        <i class="ri-time-line"></i>
+                        30 Sep 2023 01:44:PM
+                      </P>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="refund-history-tab-pane"
+              role="tabpanel"
+              aria-labelledby="refund-history-tab"
+            >
+              <div class="pane-content">
+                <h1>Refund History</h1>
+                <ul class="list-nav-items items">
+                  <li>
+                    <a class="active flex-column align-items-start gap-0">
+                      <span>Your Refund request status has been rejected</span>
+                      <P>
+                        <i class="ri-time-line"></i>
+                        30 Sep 2023 01:44:PM
+                      </P>
+                    </a>
+                  </li>
+                  <li *ngFor="let i of [1, 1, 1, 1, 1, 1]">
+                    <a class="flex-column align-items-start gap-0">
+                      <span>Your Refund request status has been rejected</span>
+                      <P>
+                        <i class="ri-time-line"></i>
+                        30 Sep 2023 01:44:PM
+                      </P>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="saved-address-tab-pane"
+              role="tabpanel"
+              aria-labelledby="saved-address-tab"
+            >
+              <div class="pane-content">
+                <h1>Saved Address</h1>
+                <div class="row gy-3">
+                  <div class="col-xl-4 col-lg-6 col-md-6" *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1]">
+                    <div class="details b-shadow">
+                        <div class="ad-head">
+                            <h4>Bhagavan</h4>
+                            <span>New Home</span>
+                        </div>
+                      <ul class="p-0">
+                        <li class="align-items-start">
+                          <p class="text-nowrap">Address :</p>
+                          <p>
+                            26, Starts Hollow Colony, Colorado, United
+                            States
+                          </p>
+                        </li>
+                        <li class="align-items-start">
+                            <p>Pin Code :</p>
+                            <p>	+1 5551855359</p>
+                        </li>
+                      </ul>
+                      <div class="d-flex align-items-center gap-2 justify-content-between">
+                        <button class="btn btn-cutom">
+                            <i class="ri-edit-box-line"></i>
+                            Edit
+                        </button>
+                        <button class="btn btn-cutom">
+                            <i class="ri-delete-bin-6-line"></i>
+                            Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel"
+>
+  <div class="offcanvas-body p-0 d-flex flex-column bg-white">
+    <div class="profile rounded-0">
+      <div class="profile-bg">
+        <div class="cover-img">
+          <img src="../../../assets/cover-img.jpg" class="rounded-0" />
+        </div>
+        <div class="profile-img">
+          <img src="../../../assets/profile-pic.png" />
+          <div>
+            <h1>Bhagavan</h1>
+            <p>bhagavan4923&#64;gmail.com</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          rounded
+          class="btn rounded-circle t-5 r-5 position-absolute text-danger"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="ri-close-large-line"></i>
+        </button>
+      </div>
+      <div class="nav-tabs-1">
+        <ul class="list-nav-items" id="myTab" role="tablist">
+          <li>
+            <a
+              class="nav-link active"
+              id="dashboard-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#dashboard-tab-pane"
+              aria-controls="dashboard-tab-pane"
+            >
+              <i class="ri-home-2-line"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a
+              id="notification-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#notification-tab-pane"
+              aria-controls="notification-tab-pane"
+            >
+              <i class="ri-notification-2-line"></i>
+              Notification
+            </a>
+          </li>
+          <li>
+            <a
+              id="bank-details-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#bank-details-tab-pane"
+              aria-controls="bank-details-tab-pane"
+            >
+              <i class="ri-bank-line"></i>
+              Bank Details
+            </a>
+          </li>
+          <li>
+            <a
+              id="wallet-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#wallet-tab-pane"
+              aria-controls="wallet-tab-pane"
+            >
+              <i class="ri-wallet-line"></i>
+              Wallet
+            </a>
+          </li>
+          <li>
+            <a
+              id="my-orders-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#my-orders-tab-pane"
+              aria-controls="my-orders-tab-pane"
+            >
+              <i class="ri-file-text-line"></i>
+              My Orders
+            </a>
+          </li>
+          <li>
+            <a
+              id="refund-history-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#refund-history-tab-pane"
+              aria-controls="refund-history-tab-pane"
+            >
+              <i class="ri-money-dollar-circle-line"></i>
+              Refund History
+            </a>
+          </li>
+          <li>
+            <a
+              id="saved-address-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#saved-address-tab-pane"
+              aria-controls="saved-address-tab-pane"
+            >
+              <i class="ri-map-pin-line"></i>
+              Saved Address
+            </a>
+          </li>
+        </ul>
+
+        <div class="log-out">
+          <hr class="m-0 border" />
+          <button
+            class="btn btn-success d-flex align-items-center justify-content-center gap-2 w-100"
+          >
+            <i class="ri-login-box-line"></i>
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

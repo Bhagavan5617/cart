@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="row gy-4 gx-4">
+    <div class="col-lg-12">
+      <div
+        class="bg-light p-2 border rounded d-flex align-items-center justify-content-between"
+      >
+        <h1 class="fs-4 m-0">Cart</h1>
+      </div>
+    </div>
+    <div class="col-lg-8">
+     <div class="cart-table table-responsive">
+        <table class="table">
+            <tbody>
+              <tr *ngFor="let i of [1, 1, 1, 1, 1, 1, 1, 1]">
+                <td>
+                  <div class="product-details align-items-center gap-3 flex-row">
+                    <img width="60" src="../../../assets/Watermelon_4.png" />
+                    <div class="flex-column align-items-start">
+                      <p>Watermelon</p>
+                      <span>
+                        <b>Sold by:</b>
+                        Fresh Cart
+                      </span>
+                      <span>
+                        <b>Unit :</b>
+                        1kg
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-details">
+                    <span> Price </span>
+                    <label>$46.89 <del>$56.90</del></label>
+                    <p>You Save: $10.90</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-details">
+                    <span>Quantity</span>
+                    <div>
+                      <a> - </a>
+                      <span>1</span>
+                      <a>+</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-details">
+                    <span>Total</span>
+                    <label>$46.89</label>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-details">
+                    <span> Action </span>
+                    <a class="text-underline text-danger">Remove</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+     </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="cart-main">
+        <div class="card-head">
+          <p class="m-0 fs-5">Cart Total</p>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>
+              <span>Subtotal</span>
+              <span>₹ 2,885.58</span>
+            </li>
+            <li>
+              <span>Shipping</span>
+              <span>Cost at Checkout</span>
+            </li>
+            <li>
+              <span>Tax</span>
+              <span>Cost at Checkout</span>
+            </li>
+          </ul>
+        </div>
+        <div class="card-foot b-0">
+          <div>
+            <b>Total</b>
+            <span>$85.58</span>
+          </div>
+          <button class="color-1">Process To Checkout</button>
+          <button class="color-2">Return To Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

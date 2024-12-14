@@ -1,0 +1,63 @@
+.pd {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pd > p {
+  font-size: 20px;
+  color: #000;
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+.pd > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pd > div > h3 {
+  font-size: 18px;
+  color: #0da487;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pd > div > h3 > del {
+  font-size: 16px;
+  color: #606060;
+  font-weight: 600;
+}
+.pd > div > h3 > span {
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  background: rgb(255 41 41 / 28%);
+  color: rgb(252 23 23 / 83%);
+  margin-left: 20px;
+}
+.pd > div > a{
+    border-radius: 50%;
+    background-color: rgba(141, 197, 246, 0.677);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pd > div > a:hover{
+    background-color: rgba(141, 197, 246, 0.518); 
+}
+.pd > div > a:hover > i{
+    color:#000;
+}
+.input-group > .btn-outline-secondary {
+  border: 1px solid #dcdcdc;
+}
+.btn-outline-secondary:hover {
+  background: none;
+  color: #000000bd;
+}

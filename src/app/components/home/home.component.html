@@ -1,0 +1,52 @@
+<div class="container p-block">
+ <div class="row">
+    <div class="col-lg-3 col-md-3">
+        <div class="p-cat-box d-md-block d-none">
+          <h1>Categories</h1>
+          <ul class="l-c">
+            <li>
+              <a class="custom-text td-none">Meats & Seafood</a>
+            </li>
+            <li>
+              <a class="custom-text td-none">Meats & Seafood</a>
+            </li>
+            <li>
+              <a class="custom-text td-none">Meats & Seafood</a>
+            </li>
+            <li>
+              <a class="custom-text td-none">Meats & Seafood</a>
+            </li>
+            <li>
+              <a class="custom-text td-none">Meats & Seafood</a>
+            </li>
+            <li>
+              <a class="custom-text td-none">Meats & Seafood</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-9">
+        <div class="p-ls">
+          <div class="row gy-3">
+            <div class="col-lg-4 col-md-6" *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]">
+              <div class="pd">
+                <a routerLink="/product" class="a-img">
+                  <img src="../../../assets/Watermelon_4.png" />
+                </a>
+                <div class="pd-div">
+                  <p>Deliciously Sweet Strawberry</p>
+                  <span>1kg</span>
+                  <ngb-rating [rate]="3" />
+                </div>
+                <div class="input-group flex-nowrap">
+                    <button class="btn btn-outline-secondary" type="button">-</button>
+                    <button  class="btn btn-block btn-outline-secondary w-100" type="button">Add To Cart</button>
+                    <button class="btn btn-outline-secondary" type="button">+</button>               
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ </div>
+</div>

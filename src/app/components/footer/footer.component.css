@@ -1,0 +1,132 @@
+.list-column-1 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 0;
+}
+.list-column-1 > li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.list-column-1 > li:hover {
+  transition: 0.5s ease;
+}
+.list-column-1 > li:hover > a::after {
+  transition: all 0.3s ease-in;
+  width: 100%;
+}
+
+.list-column-1 > li:hover::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  background: #0da487;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.list-column-1 > li > a {
+  position: relative;
+}
+.list-column-1 > li > a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: #0da487;
+  bottom: -2px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  line-height: 27px;
+  margin: 0;
+}
+
+.list-column {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+}
+.list-column > li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  cursor: pointer;
+}
+.list-column > li:hover > p,
+.list-column > li:hover > span {
+  color: #0da487;
+}
+
+.footer{
+  padding-block: 70px;
+  background-image: url(../../../assets/footer-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fafafa;
+  margin-top: 20px;
+}
+.mf-l{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+  margin: 0 15px;
+}
+.mf-l > li{
+  list-style: none; 
+}
+.mf-l > li > a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color:#fff;
+  line-height: 1.5;
+  padding: 5px;
+  letter-spacing: 0.8px;
+  position: relative;
+}
+.mf-l > li > a  > i{
+font-size: 16px;
+}
+.mf-l > li > a.active{
+  font-weight: 600;
+}
+.mf-l > li > a.active::after{
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  bottom: -11px;
+}
+
+.mobile-footer{
+  position: fixed;
+  bottom: 0;  
+  width: 100%;
+  z-index: 99999;  
+  background: #0da487;
+  display: none;
+}
+@media (max-width:568px){
+  .mobile-footer{
+    display: block;
+  }
+}

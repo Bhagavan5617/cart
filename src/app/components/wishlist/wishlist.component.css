@@ -1,0 +1,14 @@
+.pd {
+    position: relative;
+}
+
+.pd > .close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+.pd > .close > i{
+    color: #f31010;
+    font-size: 17px;
+}

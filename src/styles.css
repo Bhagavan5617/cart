@@ -1,0 +1,264 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Public Sans, sans-serif !important;
+  letter-spacing: 0.6px;
+}
+.p-abs {
+  position: absolute;
+}
+.t-0 {
+  top: 0;
+}
+.t-1 {
+  top: 1px;
+}
+.t-2 {
+  top: 2px;
+}
+.t-3 {
+  top: 3px;
+}
+.t-4 {
+  top: 4px;
+}
+.t-5 {
+  top: 5px;
+}
+.t-6 {
+  top: 6px;
+}
+.t-7 {
+  top: 7px;
+}
+.t-8 {
+  top: 8px;
+}
+.t-9 {
+  top: 9px;
+}
+.t-10 {
+  top: 10px;
+}
+.t-11 {
+  top: 11px;
+}
+.t-12 {
+  top: 12px;
+}
+
+.l-1 {
+  left: 1px;
+}
+.l-2 {
+  left: 2px;
+}
+.l-3 {
+  left: 3px;
+}
+.l-4 {
+  left: 4px;
+}
+.l-5 {
+  left: 5px;
+}
+.l-6 {
+  left: 6px;
+}
+.l-7 {
+  left: 7px;
+}
+.l-8 {
+  left: 8px;
+}
+.l-9 {
+  left: 9px;
+}
+.l-10 {
+  left: 10px;
+}
+.l-a{
+  left: auto;
+}
+.r-0 {
+  right: 0;
+}
+.r-1 {
+  right: 1px;
+}
+.r-2 {
+  right: 2px;
+}
+.r-3 {
+  right: 3px;
+}
+.r-4 {
+  right: 4px;
+}
+.r-5 {
+  right: 5px;
+}
+.r-6 {
+  right: 6px;
+}
+.r-7 {
+  right: 7px;
+}
+.r-8 {
+  right: 8px;
+}
+.r-9 {
+  right: 9px;
+}
+.r-10 {
+  right: 10px;
+}
+
+.b-1 {
+  bottom: 1px;
+}
+.b-2 {
+  bottom: 2px;
+}
+.b-3 {
+  bottom: 3px;
+}
+.b-4 {
+  bottom: 4px;
+}
+.b-5 {
+  bottom: 5px;
+}
+.b-6 {
+  bottom: 6px;
+}
+.b-7 {
+  bottom: 7px;
+}
+.b-8 {
+  bottom: 8px;
+}
+.b-9 {
+  bottom: 9px;
+}
+.b-10 {
+  bottom: 10px;
+}
+
+.color-d4d4d4 {
+  color: #d4d4d4;
+}
+.min-w-300 {
+  min-width: 360px !important;
+}
+
+.lh-0 {
+  line-height: 0 !important;
+}
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.dashed-border {
+  border: 1px dashed #000;
+}
+.fs-16 {
+  font-size: 16px !important;
+}
+.td-none {
+  text-decoration: none;
+}
+.l-c {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin: 0;
+  gap: 10px;
+}
+.l-c > li{
+  list-style: none;
+}
+.custom-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4a5568;
+  line-height: 27px;
+  margin: 0;
+  text-decoration: none;
+}
+a{
+  text-decoration: none !important;
+}
+ngb-rating > span{
+  color:#ffb321;
+}
+
+.p-cat-box {
+  background: #f8f8f8;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  top: 85px;
+}
+.p-cat-box > h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+}
+.p-cat-box > h1::before {
+  content: "";
+  height: 1.5px;
+  width: 93px;
+  background-color: #0da487;
+  position: absolute;
+  bottom: -5px;
+}
+.pd {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #f4f4f4;
+}
+.pd > img {
+  width: 100%;
+  height: auto;
+}
+.pd > .pd-div {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+}
+.btn-outline-secondary {
+  border: 1px solid #f4f4f4 !important;
+}
+.p-block {
+  padding-block-start: 50px;
+}
+.a-img{
+  display: flex;
+  cursor: pointer;
+}
+.a-img > img{
+  height:calc(100px + .025*(100vw - 320px));
+  margin: auto;
+}
+
+@media (max-width:568px){
+  .footer{
+    padding-block: 40px !important;
+  }
+}
