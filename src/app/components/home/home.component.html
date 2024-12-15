@@ -1,52 +1,160 @@
 <div class="container p-block">
- <div class="row">
-    <div class="col-lg-3 col-md-3">
-        <div class="p-cat-box d-md-block d-none">
-          <h1>Categories</h1>
-          <ul class="l-c">
-            <li>
-              <a class="custom-text td-none">Meats & Seafood</a>
-            </li>
-            <li>
-              <a class="custom-text td-none">Meats & Seafood</a>
-            </li>
-            <li>
-              <a class="custom-text td-none">Meats & Seafood</a>
-            </li>
-            <li>
-              <a class="custom-text td-none">Meats & Seafood</a>
-            </li>
-            <li>
-              <a class="custom-text td-none">Meats & Seafood</a>
-            </li>
-            <li>
-              <a class="custom-text td-none">Meats & Seafood</a>
-            </li>
-          </ul>
-        </div>
+  <div class="head-conent d-flex align-items-center justify-content-between">
+    <h1>Products List</h1>
+    <div class="dropdown d-sm-block d-md-none">
+      <button
+      class="btn btn-success dropdown-toggle d-flex align-items-center gap-2"
+        
+        type="button"
+        id="categoryDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+      <i class="ri-apps-line"></i>
+        Categories
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+        <li><a class="dropdown-item" href="#">Meats &amp; Seafood</a></li>
+        <li><a class="dropdown-item" href="#">Pet Shop</a></li>
+        <li><a class="dropdown-item" href="#">Milk &amp; Dairy Products</a></li>
+        <li><a class="dropdown-item" href="#">Wines &amp; Soft Drinks</a></li>
+        <li><a class="dropdown-item" href="#">Grocery &amp; Staples</a></li>
+        <li><a class="dropdown-item" href="#">Biscuits &amp; Snacks</a></li>
+        <li><a class="dropdown-item" href="#">Frozen Foods</a></li>
+        <li><a class="dropdown-item" href="#">Daily Breakfast</a></li>
+        <li><a class="dropdown-item" href="#">Beverages</a></li>
+        <li><a class="dropdown-item" href="#">Vegetables &amp; Fruits</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-3 col-lg-4 col-md-4">
+      <div class="p-cat-box d-md-block d-none">
+        <h1>Categories</h1>
+        <ul class="l-c">
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/268/meats.svg"
+                alt="Meats &amp; Seafood"
+              />
+              <h5><a>Meats &amp; Seafood</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/276/pet.svg"
+                alt="Pet Shop"
+              />
+              <h5><a>Pet Shop</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/275/milk.svg"
+                alt="Milk &amp; Dairy Products"
+              />
+              <h5><a>Milk &amp; Dairy Products</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/274/drink.svg"
+                alt="Wines &amp; Soft Drinks"
+              />
+              <h5><a>Wines &amp; Soft Drinks</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/273/grocery.svg"
+                alt="Grocery &amp; Staples"
+              />
+              <h5><a>Grocery &amp; Staples</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/272/biscuit.svg"
+                alt="Biscuits &amp; Snacks"
+              />
+              <h5><a>Biscuits &amp; Snacks</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/271/frozen.svg"
+                alt="Frozen Foods"
+              />
+              <h5><a>Frozen Foods</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/269/breakfast.svg"
+                alt="Daily Breakfast"
+              />
+              <h5><a>Daily Breakfast</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/267/cup.svg"
+                alt="Beverages"
+              />
+              <h5><a>Beverages</a></h5>
+            </div>
+          </li>
+          <li>
+            <div class="category-list">
+              <img
+                src="https://laravel.pixelstrap.net/fastkart/storage/266/vegetable.svg"
+                alt="Vegetables &amp; Fruits"
+              />
+              <h5><a>Vegetables &amp; Fruits</a></h5>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="col-lg-9 col-md-9">
-        <div class="p-ls">
-          <div class="row gy-3">
-            <div class="col-lg-4 col-md-6" *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]">
-              <div class="pd">
-                <a routerLink="/product" class="a-img">
-                  <img src="../../../assets/Watermelon_4.png" />
-                </a>
-                <div class="pd-div">
-                  <p>Deliciously Sweet Strawberry</p>
-                  <span>1kg</span>
-                  <ngb-rating [rate]="3" />
-                </div>
-                <div class="input-group flex-nowrap">
-                    <button class="btn btn-outline-secondary" type="button">-</button>
-                    <button  class="btn btn-block btn-outline-secondary w-100" type="button">Add To Cart</button>
-                    <button class="btn btn-outline-secondary" type="button">+</button>               
-                  </div>
+    </div>
+    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12">
+      <div class="p-ls">
+        <div class="row gy-3">
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            *ngFor="
+              let i of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            "
+          >
+            <div class="pd">
+              <a routerLink="/product" class="a-img">
+                <img src="../../../assets/Watermelon_4.png" />
+              </a>
+              <div class="pd-div">
+                <p>Deliciously Sweet Strawberry</p>
+                <span>1kg</span>
+                <span>Price: <b>$8.90</b></span>
+                <ngb-rating [rate]="3" />
+              </div>
+              <div class="input-group flex-nowrap">
+                <button class="btn btn-1" type="button">-</button>
+                <button class="btn btn-block w-100" type="button">
+                  Add To Cart
+                </button>
+                <button class="btn btn-1" type="button">+</button>
               </div>
             </div>
           </div>
         </div>
       </div>
- </div>
+    </div>
+  </div>
 </div>

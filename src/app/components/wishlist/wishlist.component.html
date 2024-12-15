@@ -11,7 +11,7 @@
       <div class="p-ls">
         <div class="row gy-3">
           <div
-            class="col-lg-3 col-md-4 col-6"
+            class="col-lg-3 col-md-4 col-12"
             *ngFor="
               let i of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
             "
@@ -23,21 +23,17 @@
               <div class="pd-div">
                 <p>Deliciously Sweet Strawberry</p>
                 <span>1kg</span>
-                <ngb-rating [rate]="3" />
+                <span>Price: <b>$8.90</b></span>
+                <div class="d-flex align-items-center gap-2">
+                  <ngb-rating [rate]="3" /> <span>5 Reviews</span>
+                </div>
               </div>
               <div class="input-group flex-nowrap">
-                <button class="btn btn-outline-secondary" type="button">
-                  -
-                </button>
-                <button
-                  class="btn btn-block btn-outline-secondary w-100"
-                  type="button"
-                >
+                <button class="btn btn-1" type="button">-</button>
+                <button class="btn btn-block w-100" type="button">
                   Add To Cart
                 </button>
-                <button class="btn btn-outline-secondary" type="button">
-                  +
-                </button>
+                <button class="btn btn-1" type="button">+</button>
               </div>
               <a class="close">
                 <i class="fa-regular fa-circle-xmark"></i>

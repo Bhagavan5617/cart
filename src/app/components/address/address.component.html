@@ -1,0 +1,80 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <a
+      class="btn-close"
+      aria-label="Close"
+      (click)="closeModal()"
+    >
+      <i class="ri-close-large-line"></i
+    ></a>
+  </div>
+  <div class="modal-body">
+    <div class="row gy-3">
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Title</label>
+          <input class="form-control" placeholder="Enter Title" />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Address</label>
+          <input class="form-control" placeholder="Enter Address" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label class="form-label">Country</label>
+          <select class="form-select" placeholder="Enter Country">
+            <option selected>Select</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label class="form-label">State </label>
+          <select
+            class="form-select"
+            placeholder="Enter State
+          "
+          >
+            <option selected>Select</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label class="form-label">City</label>
+          <input class="form-control" placeholder="Enter City" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label class="form-label">Pincode</label>
+          <input class="form-control" placeholder="Enter Pincode" />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input
+            class="form-control"
+            type="tel"
+            placeholder="Enter Phone Number"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex align-items-center gap-3 justify-content-end">
+          <button
+            class="btn btn-sm btn-border-success"
+            aria-label="Close"
+            (click)="closeModal()"
+          >
+            Cancel
+          </button>
+          <button class="btn btn-sm btn-success">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>

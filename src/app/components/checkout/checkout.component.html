@@ -1,1 +1,115 @@
-<p>checkout works!</p>
+<div class="container p-block">
+  <div class="row">
+    <div class="col-xl-8 col-lg-8 col-md-7 col-12">
+      <div class="pane-content">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <h1>Shipping Address</h1>
+          <button class="btn btn-sm btn-success" (click)="open()">
+            +Add New
+          </button>
+        </div>
+        <div class="row gy-3">
+          <div class="col-6" *ngFor="let i of [1, 1]; let j = index">
+            <div class="details b-shadow">
+              <div class="ad-head">
+                <h4 *ngIf="j == 0">Home</h4>
+                <h4 *ngIf="j == 1">Office</h4>
+              </div>
+              <ul class="p-0">
+                <li class="align-items-start">
+                  <p class="text-nowrap">Address :</p>
+                  <p>26, Starts Hollow Colony, Colorado, United States</p>
+                </li>
+                <li class="align-items-start">
+                  <p>Pin Code :</p>
+                  <p>6786887</p>
+                </li>
+              </ul>
+              <div
+                class="d-flex align-items-center gap-2 justify-content-between"
+              >
+                <button class="btn btn-cutom" (click)="open()">
+                  <i class="ri-edit-box-line"></i>
+                  Edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-5 col-12">
+      <div class="pane-content">
+        <h1>Checkout</h1>
+        <div class="cart-table table-responsive">
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let i of [1, 1, 1]">
+                <td>
+                  <div
+                    class="product-details align-items-center gap-3 flex-row"
+                  >
+                    <img width="60" src="../../../assets/Watermelon_4.png" />
+                    <div class="flex-column align-items-start">
+                      <p>Watermelon</p>
+                      <span>
+                        <b>Unit :</b>
+                        1kg
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-details">
+                    <span> Price </span>
+                    <label>$46.89 <del>$56.90</del></label>
+                    <p>You Save: $10.90</p>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="product-details">
+                    <span>Total</span>
+                    <label>$46.89</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="details b-shadow">
+          <ul class="p-0">
+            <li class="justify-content-between">
+              <p class="text-nowrap">Subtotal :</p>
+              <p>$ 288.58</p>
+            </li>
+            <li class="justify-content-between">
+              <p>Shipping:</p>
+              <p>$0.0</p>
+            </li>
+            <li class="justify-content-between">
+              <p>Tax:</p>
+              <p>$20.0</p>
+            </li>
+            <li class="justify-content-between">
+              <p>Tax:</p>
+              <p>$20.0</p>
+            </li>
+            <li class="flex-column gap-2">
+              <hr class="m-1 border w-100" />
+              <div
+                class="d-flex align-items-center justify-content-between w-100"
+              >
+                <p><b>Total</b></p>
+                <p><b>$260.86</b></p>
+              </div>
+            </li>
+          </ul>
+          <div>
+            <button class="btn btn-success w-100">Place Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

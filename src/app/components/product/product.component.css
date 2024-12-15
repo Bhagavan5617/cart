@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .pd > div > h3 {
   font-size: 18px;
@@ -39,20 +40,20 @@
   color: rgb(252 23 23 / 83%);
   margin-left: 20px;
 }
-.pd > div > a{
-    border-radius: 50%;
-    background-color: rgba(141, 197, 246, 0.677);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.pd > div > a {
+  border-radius: 50%;
+  background-color: rgba(141, 197, 246, 0.677);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.pd > div > a:hover{
-    background-color: rgba(141, 197, 246, 0.518); 
+.pd > div > a:hover {
+  background-color: rgba(141, 197, 246, 0.518);
 }
-.pd > div > a:hover > i{
-    color:#000;
+.pd > div > a:hover > i {
+  color: #000;
 }
 .input-group > .btn-outline-secondary {
   border: 1px solid #dcdcdc;
@@ -60,4 +61,11 @@
 .btn-outline-secondary:hover {
   background: none;
   color: #000000bd;
+}
+
+@media (max-width: 600px) {
+  .pd > div > .input-group {
+    width: 70% !important;
+  }
+ 
 }
