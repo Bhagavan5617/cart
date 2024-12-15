@@ -616,10 +616,10 @@ ngb-rating > span {
     white-space: nowrap;
   }
   .offcanvas-start {
-    width: 75%;
+    width: 75% !important;
   }
   .profile {
-    position: static;
+    position: static !important;
   }
 }
 
