@@ -555,7 +555,7 @@ ngb-rating > span {
 }
 .modal-header {
   padding: 10px 15px;
-  border: none;
+  border-bottom: none !important;
 }
 .modal-header > h4 {
   color: #000000;
@@ -633,6 +633,14 @@ ngb-rating > span {
   .p-block {
     padding-block-start: 30px;
   }
+  .btn-block{
+    font-size: 12px !important;
+  }
+  .btn-1 {
+    height: 25px !important;
+    width:25px;
+  }
+
 }
 
 /* ======================================= */

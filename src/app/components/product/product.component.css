@@ -66,6 +66,13 @@
 @media (max-width: 600px) {
   .pd > div > .input-group {
     width: 70% !important;
+    flex: 1;
+    padding: 2px;
+  }
+  .pd > div > a{
+    width: 33px;
+    height: 33px;
+    font-size: 14px;
   }
  
 }
