@@ -488,7 +488,7 @@ ngb-rating > span {
 .details > ul > li > a {
   font-weight: 500;
   font-size: 15px;
-  color: #0da487;
+  color: #0da487 !important;
   position: relative;
   line-height: 1.6;
   margin-left: -15px;
@@ -608,9 +608,10 @@ ngb-rating > span {
   .details > ul > li > a {
     margin-left: -3px;
   }
+  .details > ul > li > a,
   .details > ul > li > span,
   .details > ul > li > label {
-    font-size: 12px;
+    font-size: 11px;
   }
   .details > ul > li > label {
     white-space: nowrap;
