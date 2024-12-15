@@ -169,6 +169,7 @@
                       <li>
                         <label>Email :</label>
                         <span> bhagavan4923&#64;gamil.com</span>
+                        <a (click)="openEditProfile(editprofile)">Edit</a>
                       </li>
                       <li>
                         <label>Password :</label>
@@ -289,26 +290,39 @@
             >
               <div class="pane-content">
                 <h1>Transactions</h1>
-                <ul class="list-nav-items items">
-                  <li>
-                    <a class="active flex-column align-items-start gap-0">
-                      <span>Your Refund request status has been rejected</span>
-                      <P>
-                        <i class="ri-time-line"></i>
-                        30 Sep 2023 01:44:PM
-                      </P>
-                    </a>
-                  </li>
-                  <li *ngFor="let i of [1, 1, 1, 1, 1, 1]">
-                    <a class="flex-column align-items-start gap-0">
-                      <span>Your Refund request status has been rejected</span>
-                      <P>
-                        <i class="ri-time-line"></i>
-                        30 Sep 2023 01:44:PM
-                      </P>
-                    </a>
-                  </li>
-                </ul>
+                <div class="table-responsive details">
+                  <table class="details-table">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Remark</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="
+                          let i of [1, 1, 1, 1, 1, 1, 1, 1, 1];
+                          let in = index
+                        "
+                      >
+                        <td>
+                          {{ in + 1 }}
+                        </td>
+                        <td>30 Sep 2023 02:13:PM</td>
+                        <td>₹ 770.80</td>
+                        <td>Admin has credited the balance.</td>
+                        <td>
+                          <span class="border border-success rounded-pill p-2"
+                            >Credit</span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <div
@@ -319,26 +333,40 @@
             >
               <div class="pane-content">
                 <h1>My Orders</h1>
-                <ul class="list-nav-items items">
-                  <li>
-                    <a class="active flex-column align-items-start gap-0">
-                      <span>Your Refund request status has been rejected</span>
-                      <P>
-                        <i class="ri-time-line"></i>
-                        30 Sep 2023 01:44:PM
-                      </P>
-                    </a>
-                  </li>
-                  <li *ngFor="let i of [1, 1, 1, 1, 1, 1]">
-                    <a class="flex-column align-items-start gap-0">
-                      <span>Your Refund request status has been rejected</span>
-                      <P>
-                        <i class="ri-time-line"></i>
-                        30 Sep 2023 01:44:PM
-                      </P>
-                    </a>
-                  </li>
-                </ul>
+                <div class="table-responsive details">
+                  <table class="details-table">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="
+                          let i of [1, 1, 1, 1, 1, 1, 1, 1, 1];
+                          let in = index
+                        "
+                      >
+                        <td>
+                          <img
+                            src="../../../assets/Watermelon_4.png"
+                            width="100px"
+                          />
+                        </td>
+                        <td>Men Cotton Shorts</td>
+                        <td>₹ 770.80</td>
+                        <td>1</td>
+                        <td>₹ 1,141.44</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <div
@@ -349,26 +377,46 @@
             >
               <div class="pane-content">
                 <h1>Refund History</h1>
-                <ul class="list-nav-items items">
-                  <li>
-                    <a class="active flex-column align-items-start gap-0">
-                      <span>Your Refund request status has been rejected</span>
-                      <P>
-                        <i class="ri-time-line"></i>
-                        30 Sep 2023 01:44:PM
-                      </P>
-                    </a>
-                  </li>
-                  <li *ngFor="let i of [1, 1, 1, 1, 1, 1]">
-                    <a class="flex-column align-items-start gap-0">
-                      <span>Your Refund request status has been rejected</span>
-                      <P>
-                        <i class="ri-time-line"></i>
-                        30 Sep 2023 01:44:PM
-                      </P>
-                    </a>
-                  </li>
-                </ul>
+                <div class="details">
+                  <div class="table-responsive">
+                    <table class="details-table">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>order</th>
+                          <th>Status</th>
+                          <th>Reason</th>
+                          <th class="text-nowrap">Created at</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          *ngFor="
+                            let i of [1, 1, 1, 1, 1, 1, 1, 1, 1];
+                            let in = index
+                          "
+                        >
+                          <td>1</td>
+                          <td>
+                            <b>#1027</b>
+                          </td>
+                          <td>
+                            <span class="border border-success rounded-pill p-2"
+                              >Approved</span
+                            >
+                          </td>
+                          <td>
+                            The product does not function as described. It's
+                            advertised to perform certain tasks, but in reality,
+                            it falls short. I am dissatisfied and believe I should
+                            be refunded for this ineffective product.
+                          </td>
+                          <td class="text-nowrap">30 Sep 2023</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -378,35 +426,50 @@
               aria-labelledby="saved-address-tab"
             >
               <div class="pane-content">
-                <h1>Saved Address</h1>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-2"
+                >
+                  <h1>Saved Address</h1>
+                  <button
+                    class="btn btn-sm btn-success"
+                    (click)="open(content)"
+                  >
+                    + Add Address
+                  </button>
+                </div>
+
                 <div class="row gy-3">
-                  <div class="col-xl-4 col-lg-6 col-md-6" *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1]">
+                  <div
+                    class="col-xl-4 col-lg-6 col-md-6"
+                    *ngFor="let i of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]"
+                  >
                     <div class="details b-shadow">
-                        <div class="ad-head">
-                            <h4>Bhagavan</h4>
-                            <span>New Home</span>
-                        </div>
+                      <div class="ad-head">
+                        <h4>Bhagavan</h4>
+                        <span>New Home</span>
+                      </div>
                       <ul class="p-0">
                         <li class="align-items-start">
                           <p class="text-nowrap">Address :</p>
                           <p>
-                            26, Starts Hollow Colony, Colorado, United
-                            States
+                            26, Starts Hollow Colony, Colorado, United States
                           </p>
                         </li>
                         <li class="align-items-start">
-                            <p>Pin Code :</p>
-                            <p>	+1 5551855359</p>
+                          <p>Pin Code :</p>
+                          <p>+1 5551855359</p>
                         </li>
                       </ul>
-                      <div class="d-flex align-items-center gap-2 justify-content-between">
-                        <button class="btn btn-cutom">
-                            <i class="ri-edit-box-line"></i>
-                            Edit
+                      <div
+                        class="d-flex align-items-center gap-2 justify-content-between"
+                      >
+                        <button class="btn btn-cutom" (click)="open(content)">
+                          <i class="ri-edit-box-line"></i>
+                          Edit
                         </button>
                         <button class="btn btn-cutom">
-                            <i class="ri-delete-bin-6-line"></i>
-                            Delete
+                          <i class="ri-delete-bin-6-line"></i>
+                          Delete
                         </button>
                       </div>
                     </div>
@@ -544,3 +607,144 @@
     </div>
   </div>
 </div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <a
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <i class="ri-close-large-line"></i
+    ></a>
+  </div>
+  <div class="modal-body">
+    <div class="row gy-3">
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Title</label>
+          <input class="form-control" placeholder="Enter Title" />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Address</label>
+          <input class="form-control" placeholder="Enter Address" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label class="form-label">Country</label>
+          <select class="form-select" placeholder="Enter Country">
+            <option selected>Select</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label class="form-label">State </label>
+          <select
+            class="form-select"
+            placeholder="Enter State
+          "
+          >
+            <option selected>Select</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label class="form-label">City</label>
+          <input class="form-control" placeholder="Enter City" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label class="form-label">Pincode</label>
+          <input class="form-control" placeholder="Enter Pincode" />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input
+            class="form-control"
+            type="tel"
+            placeholder="Enter Phone Number"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex align-items-center gap-3 justify-content-end">
+          <button
+            class="btn btn-sm btn-border-success"
+            aria-label="Close"
+            (click)="modal.dismiss('Cross click')"
+          >
+            Cancel
+          </button>
+          <button class="btn btn-sm btn-success">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #editprofile let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Profile</h4>
+    <a
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <i class="ri-close-large-line"></i
+    ></a>
+  </div>
+  <div class="modal-body">
+    <div class="row gy-3">
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Enter Full Name"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input
+            class="form-control"
+            type="email"
+            placeholder="Enter Email Address"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input
+            class="form-control"
+            type="tel"
+            placeholder="Enter Phone Number"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex align-items-center gap-3 justify-content-end">
+          <button
+            class="btn btn-sm btn-border-success"
+            aria-label="Close"
+            (click)="modal.dismiss('Cross click')"
+          >
+            Cancel
+          </button>
+          <button class="btn btn-sm btn-success">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

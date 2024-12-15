@@ -11,7 +11,7 @@
 }
 .cart-table > table > tbody > tr > td {
   padding: 10px 20px;  
-  background: #f4f4f4;
+  background: #f9f9f9;
   border-bottom: 1px solid #d3d3d3;
 }
 .cart-table > table > tbody > tr:last-child > td {
@@ -88,7 +88,7 @@
   font-weight: 500;
 }
 .cart-main {
-  background: #f4f4f4;
+  background: #f9f9f9;
   border-radius: 10px;
   position: sticky;
   top: 100px;

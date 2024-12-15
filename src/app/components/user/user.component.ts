@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, TemplateRef } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-user',
@@ -10,4 +11,21 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
 
+  private modalService = inject(NgbModal);
+
+
+	open(content: TemplateRef<any>) {
+		this.modalService.open(content, { size: 'lg' }).result.then(
+			(result) => {
+				
+			},			
+		);
+	}
+  openEditProfile(editprofile: TemplateRef<any>) {
+		this.modalService.open(editprofile).result.then(
+			(result) => {
+				
+			},			
+		);
+	}
 }

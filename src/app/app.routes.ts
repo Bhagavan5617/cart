@@ -3,8 +3,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { CheckoutComponent } from './componets/checkout/checkout.component';
 import { UserComponent } from './components/user/user.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 export const routes: Routes = [
    {path:'home',component:HomeComponent},
