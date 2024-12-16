@@ -641,8 +641,12 @@ ngb-rating > span {
     font-size: 12px !important;
   }
   .btn-1 {
-    height: 25px !important;
-    width:25px;
+    height: 20px !important;
+    min-width:20px !important;
+    margin: 0px !important;
+  }
+  .input-group{
+    padding: 0px !important;
   }
 
 }
