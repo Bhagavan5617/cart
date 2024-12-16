@@ -46,6 +46,7 @@
   font-weight: 500;
   margin: 0;
   position: relative;
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .category-list > h5::after {

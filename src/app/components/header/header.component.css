@@ -83,6 +83,7 @@
   border: 1px solid red;
   height: 16px;
   color: #fff;
+  cursor: pointer;
   position: absolute;
 }
 @media (max-width: 568px) {
