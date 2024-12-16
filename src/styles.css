@@ -622,6 +622,9 @@ ngb-rating > span {
   .profile {
     position: static !important;
   }
+  .cover-img > img {
+    height: 130px;
+  }
 }
 
 @media (max-width: 600px) {
