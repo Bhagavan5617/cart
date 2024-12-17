@@ -628,6 +628,10 @@ ngb-rating > span {
   .cover-img > img {
     height: 130px;
   }
+  h1,
+  .btn{
+    font-size:13px !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -642,6 +646,7 @@ ngb-rating > span {
   }
   .btn-block {
     font-size: 12px !important;
+    font-weight: 600 !important;
   }
    .btn-1 {
     height: 20px !important;
@@ -651,6 +656,13 @@ ngb-rating > span {
   }
   .input-group {
     padding: 0px !important;
+  }
+  .login-container{
+    padding: 10px;
+  }
+  .modal-body,
+  .modal-header{
+    padding: 5px 15px !important;
   }
 }
 @media (max-width: 400px) {
