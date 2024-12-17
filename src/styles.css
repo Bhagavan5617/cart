@@ -592,7 +592,7 @@ ngb-rating > span {
   border-bottom: 1px solid #f4f4f4;
 }
 @media (max-width: 600px) {
-  .body {
+  body {
     letter-spacing: normal !important;
   }
   .pane-content {
