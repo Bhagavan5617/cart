@@ -637,18 +637,38 @@ ngb-rating > span {
   .p-block {
     padding-block-start: 30px;
   }
-  .btn-block{
+  .btn-block {
     font-size: 12px !important;
   }
-  .btn-1 {
+   .btn-1 {
     height: 20px !important;
-    min-width:20px !important;
-    margin: 0px !important;
+    min-width: 20px !important;
+    font-size: 12px;
+    font-weight: 600;
   }
-  .input-group{
+  .input-group {
     padding: 0px !important;
   }
-
+}
+@media (max-width: 350px) {
+  .a-img > img {
+    height: calc(100px + 0.025 * (100vw - 320px));
+    margin: auto;
+  }
+  .btn.btn-success {
+    width: 100%;
+  }
+  .pd-div {
+    gap:0 !important;
+  }
+  .pd-div > span,
+  .pd-div > p {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+  .pd-div + .input-group > .btn-1 {
+    display: none !important;
+  }
 }
 
 /* ======================================= */
@@ -836,7 +856,7 @@ ngb-rating > span {
   padding: 5px;
   min-width: 30px;
   height: 30px;
-  margin: 0 10px !important;
+  margin: 0 4px !important;
   font-weight: 600;
 }
 .input-group .btn:active,
