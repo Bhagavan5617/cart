@@ -650,7 +650,7 @@ ngb-rating > span {
     padding: 0px !important;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   .a-img > img {
     height: calc(100px + 0.025 * (100vw - 320px));
     margin: auto;
