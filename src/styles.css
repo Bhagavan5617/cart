@@ -253,6 +253,7 @@ ngb-rating > span {
 .a-img > img {
   height: calc(100px + 0.025 * (100vw - 320px));
   margin: auto;
+  width:100%;
 }
 .head-conent {
   padding: 10px;
