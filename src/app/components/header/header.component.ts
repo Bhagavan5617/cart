@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ApiService } from '../../services/api.service';
+import { CartService } from '../../services/cart.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -16,13 +18,21 @@ export class HeaderComponent implements OnInit{
   selectedCategory:any ;
   categories:any = []
   isFixed:boolean =false;
+  
   @HostListener('window:scroll',[])
   onWindowScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.isFixed = scrollPosition > 100; 
+
   }
   private modalService = inject(NgbModal);
   private productService = inject(ApiService)
+  constructor(private cartService:CartService){
+    
+  }
+  get cartValue(){
+   return this.cartService.cartItem$.pipe(map((items:any) => items.length));
+  }
   ngOnInit(): void {
     this.productService.getCategoriesObservable().subscribe(
       categories => {
@@ -32,6 +42,7 @@ export class HeaderComponent implements OnInit{
         console.error('Error fetching categories:', error);
       }
     );
+   
 
   }
   

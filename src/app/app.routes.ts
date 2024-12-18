@@ -10,7 +10,7 @@ export const routes: Routes = [
    {path:'home',component:HomeComponent},
    {path:'product',component:ProductComponent},
    {path:'cart',component:CartComponent},
-   {path:'product',component:ProductComponent},
+   {path:'product/:id',component:ProductComponent},
    {path:'wishlist',component:WishlistComponent},
    {path:'checkout',component:CheckoutComponent},
    {path:'user',component:UserComponent},

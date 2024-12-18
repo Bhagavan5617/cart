@@ -46,7 +46,7 @@
         <div class="row gy-3 gx-2">
           <div class="col-lg-4 col-md-6 col-6" *ngFor="let product of products">
             <div class="pd">
-              <a routerLink="/product" class="a-img">
+              <a class="a-img" (click)="onProductSelect(product.id)">
                 <img [src]="product.img" />
               </a>
               <div class="pd-div">
@@ -58,11 +58,11 @@
                 <ngb-rating [rate]="3" />
               </div>
               <div class="input-group flex-nowrap">
-                <button class="btn btn-1" type="button">-</button>
-                <button class="btn btn-block w-100" type="button">
+                <button class="btn btn-1" type="button" (click)="decreaseCartValue(product)">-</button>
+                <button class="btn btn-block w-100" type="button" (click)="addToCart(product)">
                   Add To Cart
                 </button>
-                <button class="btn btn-1" type="button">+</button>
+                <button class="btn btn-1" type="button"  (click)="increaseCartValue(product)">+</button>
               </div>
             </div>
           </div>

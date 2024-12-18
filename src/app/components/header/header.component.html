@@ -25,7 +25,7 @@
             </li>
             <li class="d-md-flex d-sm-none  position-relative  d-none">
               <a routerLink="/cart" routerLinkActive="active"><i class="ri-shopping-cart-line"></i></a>
-              <b class="cart-items">1</b>
+              <b class="cart-items" *ngIf="cartValue | async as cartCount">{{cartCount}}</b>
             </li>
             <li>
              <a routerLink="/user">
