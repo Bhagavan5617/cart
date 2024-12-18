@@ -251,7 +251,7 @@ ngb-rating > span {
   cursor: pointer;
 }
 .a-img > img {
-  height: calc(155px + 0.025 * (100vw - 320px));
+  height: calc(100px + 0.025 * (100vw - 320px));
   margin: auto;
 }
 .head-conent {

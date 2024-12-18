@@ -45,28 +45,20 @@
           <div class="container-fluid">
             <div class="dropdown">
               <button
-              class="btn btn-success dropdown-toggle d-flex align-items-center gap-2 d-md-block d-none"
-                
-                type="button"
-                id="categoryDropdown"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-              <i class="ri-apps-line"></i>
-                Categories
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
-                <li><a class="dropdown-item" href="#">Meats &amp; Seafood</a></li>
-                <li><a class="dropdown-item" href="#">Pet Shop</a></li>
-                <li><a class="dropdown-item" href="#">Milk &amp; Dairy Products</a></li>
-                <li><a class="dropdown-item" href="#">Wines &amp; Soft Drinks</a></li>
-                <li><a class="dropdown-item" href="#">Grocery &amp; Staples</a></li>
-                <li><a class="dropdown-item" href="#">Biscuits &amp; Snacks</a></li>
-                <li><a class="dropdown-item" href="#">Frozen Foods</a></li>
-                <li><a class="dropdown-item" href="#">Daily Breakfast</a></li>
-                <li><a class="dropdown-item" href="#">Beverages</a></li>
-                <li><a class="dropdown-item" href="#">Vegetables &amp; Fruits</a></li>
-              </ul>
+        class="btn btn-success dropdown-toggle d-flex align-items-center gap-2"
+        type="button"
+        id="categoryDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="ri-apps-line"></i>
+        Categories
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+        <li *ngFor="let cat of categories" (click)="onCategorySelect(cat.name)">
+          <a class="dropdown-item">{{ cat.name }}</a>
+        </li>
+      </ul>
             </div>
             
 
