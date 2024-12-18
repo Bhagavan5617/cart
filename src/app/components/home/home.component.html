@@ -14,7 +14,7 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
         <li *ngFor="let cat of categories" (click)="onCategorySelect(cat)">
-          <a class="dropdown-item" href="#">{{ cat.name }}</a>
+          <a class="dropdown-item">{{ cat.name }}</a>
         </li>
       </ul>
     </div>
