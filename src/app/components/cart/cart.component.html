@@ -11,12 +11,12 @@
      <div class="cart-table table-responsive">
         <table class="table">
             <tbody>
-              <tr *ngFor="let i of [1, 1, 1, 1, 1, 1, 1, 1]">
+              <tr *ngFor="let product of cartProducts">
                 <td>
                   <div class="product-details align-items-center gap-3 flex-row">
-                    <img width="60" src="../../../assets/Watermelon_4.png" />
+                    <img width="60" [src]="product.img" />
                     <div class="flex-column align-items-start">
-                      <p>Watermelon</p>
+                      <p>{{product.name}}</p>
                       <span>
                         <b>Sold by:</b>
                         Fresh Cart
@@ -31,8 +31,8 @@
                 <td>
                   <div class="product-details">
                     <span> Price </span>
-                    <label>$46.89 <del>$56.90</del></label>
-                    <p>You Save: $10.90</p>
+                    <label>{{product.price | currency:'INR'}}<del></del></label>
+                    <p>You Save: 100.00</p>
                   </div>
                 </td>
                 <td>

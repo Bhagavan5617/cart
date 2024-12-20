@@ -1,71 +1,75 @@
 <header class="header">
   <div class="container">
     <div class="d-flex flex-column gap-2 position-relative">
-      <div [ngClass]="{'fixed-position':isFixed}">
-       <div class="container">
-        <div class="header-nav">
-          <a routerLink="/home">
-            <img src="../assets/logo1.svg" width="120" />
-          </a>
-          <div class="position-relative">
-            <input
-              class="form-control custom-search min-w-300"
-              placeholder="Search"
-            />
-            <a class="p-abs t-0 r-0 abs-class">
-              <i class="fa-solid fa-magnifying-glass fs-3 text-white"></i>
+      <div [ngClass]="{ 'fixed-position': isFixed }">
+        <div class="container">
+          <div class="header-nav">
+            <a routerLink="/home">
+              <img src="../assets/logo1.svg" width="120" />
             </a>
+            <div class="position-relative">
+              <input
+                class="form-control custom-search min-w-300"
+                placeholder="Search"
+              />
+              <a class="p-abs t-0 r-0 abs-class">
+                <i class="fa-solid fa-magnifying-glass fs-3 text-white"></i>
+              </a>
+            </div>
+            <ul class="list-group list-group-flesh">
+              <li>
+                <a class="fs-6" (click)="open()">login</a>
+              </li>
+              <li class="d-md-flex d-sm-none d-none">
+                <a routerLink="/wishlist" routerLinkActive="active"
+                  ><i class="ri-heart-line"></i
+                ></a>
+              </li>
+              <li class="d-md-flex d-sm-none position-relative d-none">
+                <a routerLink="/cart" routerLinkActive="active"
+                  ><i class="ri-shopping-cart-line"></i
+                ></a>
+                <b class="cart-items" *ngIf="cartItemValue != 0">{{
+                  cartItemValue
+                }}</b>
+              </li>
+              <li>
+                <a routerLink="/user">
+                  <img
+                    class="rounded-circle"
+                    src="../assets/profile-pic.png"
+                    width="40"
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
-          <ul class="list-group list-group-flesh">
-            <li>
-              <a class="fs-6" (click)="open()">login</a>
-            </li>
-            <li class="d-md-flex d-sm-none d-none">
-              <a routerLink="/wishlist" routerLinkActive="active"><i class="ri-heart-line"></i></a>
-            </li>
-            <li class="d-md-flex d-sm-none  position-relative  d-none">
-              <a routerLink="/cart" routerLinkActive="active"><i class="ri-shopping-cart-line"></i></a>
-              <b class="cart-items" *ngIf="cartValue | async as cartCount">{{cartCount}}</b>
-            </li>
-            <li>
-             <a routerLink="/user">
-              <img
-              class="rounded-circle"
-              src="../assets/profile-pic.png"
-              width="40"
-            />
-             </a>
-            </li>
-          </ul>
         </div>
-       </div>
       </div>
-      <div class=" d-md-block d-none">
-        <nav class="navbar navbar-expand-lg ">
+      <div class="d-md-block d-none">
+        <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <div class="dropdown">
               <button
-        class="btn btn-success dropdown-toggle d-flex align-items-center gap-2"
-        type="button"
-        id="categoryDropdown"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <i class="ri-apps-line"></i>
-        Categories
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
-        <li *ngFor="let cat of categories" (click)="onCategorySelect(cat.name)">
-          <a class="dropdown-item">{{ cat.name }}</a>
-        </li>
-      </ul>
+                class="btn btn-success dropdown-toggle d-flex align-items-center gap-2"
+                type="button"
+                id="categoryDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="ri-apps-line"></i>
+                Categories
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                <li
+                  *ngFor="let cat of categories"
+                  (click)="onCategorySelect(cat.name)"
+                >
+                  <a class="dropdown-item">{{ cat.name }}</a>
+                </li>
+              </ul>
             </div>
-            
 
-
-
-
-           
             <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll flex-row">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -94,11 +98,21 @@
                   </li>
                 </ul>
               </li>
-             
             </ul>
-            <button class="btn btn-success bg-color text-success d-flex align-items-center gap-1 d-md-block d-none">
+            <button
+              class="btn btn-success bg-color text-success d-flex align-items-center gap-1 d-md-block d-none"
+            >
               <span class="lh-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" viewBox="0 0 24 24" fill="currentColor"><path d="M13 9H21L11 24V15H4L13 0V9ZM11 11V7.22063L7.53238 13H13V17.3944L17.263 11H11Z"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M13 9H21L11 24V15H4L13 0V9ZM11 11V7.22063L7.53238 13H13V17.3944L17.263 11H11Z"
+                  ></path>
+                </svg>
               </span>
               Deal Today
             </button>

@@ -13,7 +13,7 @@ import { CartService } from '../../services/cart.service';
   styleUrl: './product.component.css',
 })
 export class ProductComponent implements OnInit {
-  productData: any | undefined;
+  productData: any ={};
   productId: any = null;
   constructor(
     private route: ActivatedRoute,
@@ -48,14 +48,15 @@ export class ProductComponent implements OnInit {
   }
 
   addToCart(product: any) {
-    this.cartService.addToCart(product);
-   this.cartService.getCartItems();
+    this.cartService.addToCart(product).subscribe(
+      data => console.log(data)
+    )
   
   }
   increaseCartValue(productId: any) {
-    this.cartService.increaseQuantity(productId);
+   
   }
   decreaseCartValue(productId: any) {
-    this.cartService.decreaseCart(productId);
+
   }
 }

@@ -27,11 +27,18 @@ export class HeaderComponent implements OnInit{
   }
   private modalService = inject(NgbModal);
   private productService = inject(ApiService)
+  cartItemValue: any;
   constructor(private cartService:CartService){
     
   }
-  get cartValue(){
-   return this.cartService.cartItem$.pipe(map((items:any) => items.length));
+cartValue(){
+   return this.cartService.cartItem$.subscribe(
+    data => {
+      console.log(data);
+      this.cartItemValue = data.length;
+      return data;
+    }
+   );
   }
   ngOnInit(): void {
     this.productService.getCategoriesObservable().subscribe(
@@ -42,7 +49,7 @@ export class HeaderComponent implements OnInit{
         console.error('Error fetching categories:', error);
       }
     );
-   
+  console.log( this.cartValue())
 
   }
   

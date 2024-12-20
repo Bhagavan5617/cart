@@ -6,7 +6,6 @@ import { ApiService } from '../../services/api.service';
 import { Subject } from 'rxjs';
 import { CartService } from '../../services/cart.service';
 
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -14,9 +13,10 @@ import { CartService } from '../../services/cart.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit,OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
   categories: any[] = [];
   products: any[] = [];
+  cartItems: any = {};
   selectedCategory: string = '';
   private destroy$ = new Subject<void>();
 
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit,OnDestroy {
     private productService: ApiService,
     config: NgbRatingConfig,
     private route: Router,
-    private cartService:CartService
+    private cartService: CartService
   ) {
     config.max = 5;
     config.readonly = true;
@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit,OnDestroy {
   ngOnInit(): void {
     this.fetchCategories();
     this.fetchAllProducts();
+    this.getCartData();
 
     this.productService.getProductsObservable().subscribe(
       (products) => {
@@ -43,7 +44,6 @@ export class HomeComponent implements OnInit,OnDestroy {
       }
     );
 
-    // Subscribe to the shared observable for categories
     this.productService.getCategoriesObservable().subscribe(
       (categories) => {
         this.categories = categories;
@@ -53,6 +53,7 @@ export class HomeComponent implements OnInit,OnDestroy {
       }
     );
     this.getObservableData();
+    
   }
   ngOnDestroy(): void {
     this.destroy$.next();
@@ -119,21 +120,50 @@ export class HomeComponent implements OnInit,OnDestroy {
     this.route.navigate(['/product', id]);
   }
 
+  getCartData() {
+    return this.cartService
+      .getCartItems()
+      .subscribe((items) => (this.cartItems = items));
+  }
   addToCart(product: any) {
-    console.log('Adding product to cart:', product);
-    this.cartService.addToCart(product);
-    console.log('Current cart items:', this.cartService.getCartItems());
+    this.getCartData();
+    const existingProduct = this.cartItems.some(
+      (item: any) => item.id === product.id
+    );
+    const getIndex = this.cartItems.findIndex(
+      (item: any) => item.id == product.id
+    );
+    const newProduct = {
+      ...product,
+      cartQuantity: 1,
+    };
+    if (!existingProduct) {
+      this.cartService.addToCart(newProduct).subscribe(
+        (data) => {
+          console.log('Product added:', data);
+        },
+        (error) => console.log('Error adding product:', error)
+      );
+    } else {
+      const neUpadatedProduct = {
+        ...this.cartItems[getIndex],
+        cartQuantity: (this.cartItems[getIndex].cartQuantity += 1),
+      };
+      console.log(neUpadatedProduct);
+      this.cartService
+        .updateCart(neUpadatedProduct, neUpadatedProduct.id)
+        .subscribe(
+          (data) => {
+            console.log('Cart updated:', data);
+            this.cartService.updateCartState();
+          },
+          (error) => console.log('Error updating cart:', error)
+        );
+    }
+    this.getCartData();
   }
 
-  increaseCartValue(product: any) {
-    console.log('Increasing quantity for product ID:', product);
-    this.cartService.increaseQuantity(product);
-    console.log('Current cart items:', this.cartService.getCartItems());
-  }
+  increaseCartValue(product: any) {}
 
-  decreaseCartValue(product: any) {
-    console.log('Decreasing quantity for product ID:', product);
-    this.cartService.decreaseCart(product);
-    console.log('Current cart items:', this.cartService.getCartItems());
-  }
+  decreaseCartValue(product: any) {}
 }
