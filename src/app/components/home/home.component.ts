@@ -53,7 +53,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     );
     this.getObservableData();
-    
   }
   ngOnDestroy(): void {
     this.destroy$.next();
@@ -136,6 +135,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     const newProduct = {
       ...product,
       cartQuantity: 1,
+      cartValue: product.price,
     };
     if (!existingProduct) {
       this.cartService.addToCart(newProduct).subscribe(
@@ -145,25 +145,75 @@ export class HomeComponent implements OnInit, OnDestroy {
         (error) => console.log('Error adding product:', error)
       );
     } else {
-      const neUpadatedProduct = {
-        ...this.cartItems[getIndex],
-        cartQuantity: (this.cartItems[getIndex].cartQuantity += 1),
-      };
-      console.log(neUpadatedProduct);
-      this.cartService
-        .updateCart(neUpadatedProduct, neUpadatedProduct.id)
-        .subscribe(
-          (data) => {
-            console.log('Cart updated:', data);
-            this.cartService.updateCartState();
-          },
-          (error) => console.log('Error updating cart:', error)
-        );
+      const newUpdatedProduct = this.gettheUpdateCartObject(product);
+      this.updatecartValue(newUpdatedProduct, newUpdatedProduct.id);
     }
     this.getCartData();
   }
 
-  increaseCartValue(product: any) {}
+  updatecartValue(product: any, id: any) {
+    this.cartService.updateCart(product, id).subscribe(
+      (data) => {
+        console.log('Cart updated:', data);
+        this.cartService.updateCartState();
+      },
+      (error) => console.log('Error updating cart:', error)
+    );
+  }
 
-  decreaseCartValue(product: any) {}
+  gettheUpdateCartObject(product: any) {
+    if (!this.cartItems || !Array.isArray(this.cartItems)) {
+      console.error('cartItems is not defined or not an array');
+      return null;
+    }
+    const getIndex = this.cartItems.findIndex((item: any) => item.id === product.id);
+    if (getIndex === -1) {
+      console.error('Product not found in cart:', product);
+      return null;
+    }
+    const cartItem = this.cartItems[getIndex];
+    if (!cartItem) {
+      console.error('Cart item at index is undefined:', getIndex);
+      return null;
+    }
+    cartItem.cartValue = (cartItem.cartQuantity + 1) * cartItem.price;
+    const updatedProduct = {
+      ...cartItem,
+      cartQuantity: cartItem.cartQuantity + 1,
+    };  
+    return updatedProduct; 
+  }
+  
+  deleteCartItem(id: any) {
+    this.cartService.deleteCartItem(id).subscribe((data) => {
+      console.log(data);
+    });
+  }
+  decreasedCartItemObject(product: any) {
+    const getIndex = this.cartItems.findIndex(
+      (item: any) => item.id == product.id
+    );
+    if (this.cartItems[getIndex].cartQuantity > 0) {
+      this.cartItems[getIndex].cartValue =
+        (this.cartItems[getIndex].cartQuantity - 1) *
+        this.cartItems[getIndex].price;
+    }
+    const neUpadatedProduct = {
+      ...this.cartItems[getIndex],
+      cartQuantity: this.cartItems[getIndex].cartQuantity - 1,
+    };
+    return neUpadatedProduct;
+  }
+
+  decreaseCartValue(product: any) {
+    console.log('product that is clicked');   
+    const newUpdateProduct = this.decreasedCartItemObject(product);
+    this.updatecartValue(newUpdateProduct, newUpdateProduct.id);
+    this.getCartData();
+  }
+  increaseCartValue(product: any) {  
+    this.getCartData();
+    const neUpadatedProduct = this.gettheUpdateCartObject(product);
+    this.updatecartValue(neUpadatedProduct, neUpadatedProduct.id);   
+  }
 }

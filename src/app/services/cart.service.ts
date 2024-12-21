@@ -16,6 +16,7 @@ export class CartService {
   private apiUrl = 'http://localhost:3000/cart'; // Example URL
   private cartSubject = new BehaviorSubject<any[]>([]);
   cartItem$ = this.cartSubject.asObservable();
+  
 
   constructor(private http: HttpClient) {}
 
@@ -52,6 +53,9 @@ export class CartService {
 
   deleteCartItem(id: any): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`).pipe(
+      tap(
+        data => this.cartSubject.next(data)
+      ),
       catchError((error) => {
         console.error('Failed to remove item from cart', error);
         throw error;
