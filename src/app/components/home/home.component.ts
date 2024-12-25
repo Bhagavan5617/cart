@@ -5,6 +5,8 @@ import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { ApiService } from '../../services/api.service';
 import { Subject } from 'rxjs';
 import { CartService } from '../../services/cart.service';
+import { CartNewService } from '../../services/cartNew.service';
+import { cartData } from '../modals/cart';
 
 @Component({
   selector: 'app-home',
@@ -18,19 +20,23 @@ export class HomeComponent implements OnInit, OnDestroy {
   products: any[] = [];
   cartItems: any = {};
   selectedCategory: string = '';
-  private destroy$ = new Subject<void>();
+
+  cartData: cartData[] = [];
 
   constructor(
     private productService: ApiService,
     config: NgbRatingConfig,
     private route: Router,
-    private cartService: CartService
+    private cartService: CartService,
+    private cartNewService: CartNewService
   ) {
     config.max = 5;
     config.readonly = true;
   }
 
   ngOnInit(): void {
+    this.cartNewService.getCartData().subscribe((data) => console.log(data));
+
     this.fetchCategories();
     this.fetchAllProducts();
     this.getCartData();
@@ -54,10 +60,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     );
     this.getObservableData();
   }
-  ngOnDestroy(): void {
-    this.destroy$.next();
-    this.destroy$.complete();
-  }
+  ngOnDestroy(): void {}
   getObservableData() {
     this.productService
       .getCategoriesObservable()
@@ -166,7 +169,9 @@ export class HomeComponent implements OnInit, OnDestroy {
       console.error('cartItems is not defined or not an array');
       return null;
     }
-    const getIndex = this.cartItems.findIndex((item: any) => item.id === product.id);
+    const getIndex = this.cartItems.findIndex(
+      (item: any) => item.id === product.id
+    );
     if (getIndex === -1) {
       console.error('Product not found in cart:', product);
       return null;
@@ -180,10 +185,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     const updatedProduct = {
       ...cartItem,
       cartQuantity: cartItem.cartQuantity + 1,
-    };  
-    return updatedProduct; 
+    };
+    return updatedProduct;
   }
-  
+
   deleteCartItem(id: any) {
     this.cartService.deleteCartItem(id).subscribe((data) => {
       console.log(data);
@@ -206,14 +211,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   decreaseCartValue(product: any) {
-    console.log('product that is clicked');   
+    console.log('product that is clicked');
     const newUpdateProduct = this.decreasedCartItemObject(product);
     this.updatecartValue(newUpdateProduct, newUpdateProduct.id);
     this.getCartData();
   }
-  increaseCartValue(product: any) {  
+  increaseCartValue(product: any) {
     this.getCartData();
     const neUpadatedProduct = this.gettheUpdateCartObject(product);
-    this.updatecartValue(neUpadatedProduct, neUpadatedProduct.id);   
+    this.updatecartValue(neUpadatedProduct, neUpadatedProduct.id);
   }
 }

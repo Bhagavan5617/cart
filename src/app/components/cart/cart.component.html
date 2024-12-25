@@ -11,12 +11,12 @@
       <div class="cart-table table-responsive">
         <table class="table">
           <tbody>
-            <tr *ngFor="let product of cartProducts">
-              <td>
+            <tr *ngFor="let product of cartData|async">
+              <td>              
                 <div class="product-details align-items-center gap-3 flex-row">
                   <img width="60" [src]="product.img" />
                   <div class="flex-column align-items-start">
-                    <p>{{ product.name }}</p>
+                    <p appColorchanges highLightColor="red">{{ product.name | custom}}</p>
                     <!-- <span>
                         <b>Sold by:</b>
                         Fresh Cart
